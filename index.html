@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数独游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 数独游戏</h1>
+            <p>Fill in the grid so that every row, column, and 3x3 box contains the digits 1-9</p>
+        </div>
+
+        <div class="control-panel">
+            <div class="difficulty-selector">
+                <label for="difficulty">难度级别:</label>
+                <select id="difficulty">
+                    <option value="easy">简单 (40 个空)</option>
+                    <option value="medium" selected>中等 (50 个空)</option>
+                    <option value="hard">困难 (60 个空)</option>
+                </select>
+            </div>
+
+            <div class="timer-section">
+                <div class="timer">
+                    <span id="timer">00:00:00</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="newGameBtn" class="btn btn-primary">新游戏</button>
+                <button id="checkBtn" class="btn btn-secondary">检查答案</button>
+                <button id="resetBtn" class="btn btn-secondary">重置</button>
+                <button id="hintBtn" class="btn btn-secondary">提示</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div id="sudoku-grid" class="sudoku-grid"></div>
+        </div>
+
+        <div class="status-bar">
+            <div id="message" class="message"></div>
+            <div id="stats" class="stats"></div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-message"></p>
+            <button id="modal-btn" class="btn btn-primary">确定</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
